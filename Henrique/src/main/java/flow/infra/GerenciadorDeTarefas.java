@@ -22,12 +22,13 @@ public class GerenciadorDeTarefas {
                     - 1. Cadastrar Tarefas
                     - 2. Listar Tarefas
                     - 3. Concluir Tarefa
+                    - 4. Encerrar Programa
                     ----------------------
                     """);
             System.out.println();
             System.out.print("Escolha: ");
             Integer escolha = leitorNumero.nextInt();
-            if (escolha != 1 && escolha != 2 && escolha != 3) {
+            if (escolha != 1 && escolha != 2 && escolha != 3 && escolha != 4) {
                 System.out.println("Informe um valor correspondente ao menu!");
             }
             if (escolha == 1) {
@@ -45,7 +46,22 @@ public class GerenciadorDeTarefas {
             }
 
             if (escolha == 3) {
-                System.out.println("Marcar como concluida..");
+                System.out.println("Escolha qual tarefa deseja concluir: ");
+                for (int i = 0; i < tarefas.size(); i++) {
+                    System.out.println(i + 1 + ". " + tarefas.get(i));
+                }
+                System.out.print("Escolha (número): ");
+                Integer escolhaTarefa = leitorNumero.nextInt();
+
+                if (escolhaTarefa <= tarefas.size()) {
+                    System.out.println("Tarefa: " + tarefas.get(escolhaTarefa - 1) + " concluida!");
+                    tarefas.remove(escolhaTarefa - 1);
+
+                }
+            }
+
+            if (escolha == 4) {
+                break;
             }
 
         }
