@@ -1,16 +1,19 @@
 package flow.infra;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class GerenciadorDeTarefas {
 
-    public List<String> cadastrarTarefas() {
+    public List<String> cadastrarTarefas() throws InterruptedException {
         List<String> tarefas = new ArrayList<>();
         Integer contador = 0;
-        while (!contador.equals(1)) {
 
+        while (!contador.equals(1)) {
+            TimeUnit.SECONDS.sleep(1);
             Scanner leitorTexto = new Scanner(System.in);
             Scanner leitorNumero = new Scanner(System.in);
 
@@ -43,6 +46,7 @@ public class GerenciadorDeTarefas {
                 for (int i = 0; i < tarefas.size(); i++) {
                     System.out.println(i+1 + " - " + tarefas.get(i));
                 }
+                TimeUnit.SECONDS.sleep(3);
             }
 
             if (escolha == 3) {
@@ -53,6 +57,7 @@ public class GerenciadorDeTarefas {
                 System.out.print("Escolha (número): ");
                 Integer escolhaTarefa = leitorNumero.nextInt();
 
+                TimeUnit.SECONDS.sleep(2);
                 if (escolhaTarefa <= tarefas.size()) {
                     System.out.println("Tarefa: " + tarefas.get(escolhaTarefa - 1) + " concluida!");
                     tarefas.remove(escolhaTarefa - 1);
@@ -61,6 +66,8 @@ public class GerenciadorDeTarefas {
             }
 
             if (escolha == 4) {
+                System.out.println("Encerrando Gerenciador de Tarefa. Até mais!");
+                TimeUnit.SECONDS.sleep(1);
                 break;
             }
 
