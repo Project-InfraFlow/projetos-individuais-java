@@ -42,26 +42,39 @@ public class GerenciadorDeTarefas {
             }
 
             if (escolha == 2) {
-                System.out.println("Lista de tarefas: ");
-                for (int i = 0; i < tarefas.size(); i++) {
-                    System.out.println(i+1 + " - " + tarefas.get(i));
+                if (tarefas.isEmpty()) {
+                    System.out.println("Cadastre para visualizar suas tarefas.");
+                    TimeUnit.SECONDS.sleep(2);
+                } else {
+                    System.out.println("Lista de tarefas: ");
+                    for (int i = 0; i < tarefas.size(); i++) {
+                        System.out.println(i+1 + " - " + tarefas.get(i));
+                    }
+                    TimeUnit.SECONDS.sleep(2);
                 }
-                TimeUnit.SECONDS.sleep(3);
             }
 
             if (escolha == 3) {
-                System.out.println("Escolha qual tarefa deseja concluir: ");
-                for (int i = 0; i < tarefas.size(); i++) {
-                    System.out.println(i + 1 + ". " + tarefas.get(i));
-                }
-                System.out.print("Escolha (número): ");
-                Integer escolhaTarefa = leitorNumero.nextInt();
+                if (tarefas.isEmpty()) {
+                    System.out.println("Cadastre antes para acessar essa opção.");
+                    TimeUnit.SECONDS.sleep(2);
+                } else {
 
-                TimeUnit.SECONDS.sleep(2);
-                if (escolhaTarefa <= tarefas.size()) {
-                    System.out.println("Tarefa: " + tarefas.get(escolhaTarefa - 1) + " concluida!");
-                    tarefas.remove(escolhaTarefa - 1);
+                    System.out.println("Escolha qual tarefa deseja concluir: ");
+                    for (int i = 0; i < tarefas.size(); i++) {
+                        System.out.println(i + 1 + ". " + tarefas.get(i));
+                    }
+                    System.out.print("Escolha (número): ");
+                    Integer escolhaTarefa = leitorNumero.nextInt();
 
+                    TimeUnit.SECONDS.sleep(2);
+                    if (escolhaTarefa <= tarefas.size()) {
+                        System.out.println("Tarefa: " + tarefas.get(escolhaTarefa - 1) + " concluida!");
+                        tarefas.remove(escolhaTarefa - 1);
+
+                    } else {
+                        System.out.println("Informe um número correspondente.");
+                    }
                 }
             }
 
