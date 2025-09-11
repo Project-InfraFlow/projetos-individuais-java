@@ -7,7 +7,7 @@ Este repósitorio contém todos os projetos individuais dos membros da equipe In
 
 O projeto utiliza as seguintes tecnologias e dependências:
 
-* **Linguagem:** Java 17
+* **Linguagem:** Java 21
 * **Gerenciador de Dependências:** Maven
 
 
