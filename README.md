@@ -1,6 +1,6 @@
 # Projetos Individuais com Java
 
-Este repósitorio contém todos os projetos individuais dos membros da equipe Infra Flow. Ele foi criado como um projeto individual para demonstrar o domínio da equipe desenvolvido em Java.
+Este repósitorio contém todos os projetos individuais dos membros da equipe InfraFlow. Ele foi criado como um projeto individual para demonstrar o domínio da equipe desenvolvido em Java.
 
 
 ## Tecnologias e Ferramentas
