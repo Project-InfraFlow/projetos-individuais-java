@@ -1,7 +1,4 @@
 # Projetos Individuais com Java
-# Infra Flow
-
-## Visão Geral
 
 Este repósitorio contém todos os projetos individuais dos membros da equipe Infra Flow. Ele foi criado como um projeto individual para demonstrar o domínio da equipe desenvolvido em Java.
 
@@ -33,3 +30,4 @@ Siga os passos abaixo para clonar o repositório e executar a aplicação:
     ```
 
 
+2. Abra o diretório na IDE de preferência e execute o código
